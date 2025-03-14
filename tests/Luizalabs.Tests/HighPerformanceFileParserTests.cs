@@ -37,13 +37,20 @@ public class HighPerformanceFileParserTests
         Assert.Equal(7, users.Count);
 
         var user1 = users.First(u => u.Id == 57);
-
         Assert.Equal(57, user1.Id);
         Assert.Equal("Elidia Gulgowski IV", user1.Name);
         Assert.Single(user1.Orders);
         Assert.Equal(0, user1.Orders.First().Products.First().Id) ; // productId deve ser 0
         Assert.Equal(1417.25m, user1.Orders.First().Total );
         Assert.Equal(new DateTime(2021, 09, 19), user1.Orders.First().Date);
+
+        var user2 = users.First(u => u.Id == 1);
+        Assert.Equal(1, user2.Id);
+        Assert.Equal("Palmer Prosacco", user2.Name);
+        Assert.Single(user2.Orders);
+        Assert.Equal(3, user2.Orders.First().Products.First().Id); // productId deve ser 0
+        Assert.Equal(1836.74m, user2.Orders.First().Total);
+        Assert.Equal(new DateTime(2021, 03, 08), user2.Orders.First().Date);
     }
 
     [Fact(DisplayName = "Parse emptyfile")]
