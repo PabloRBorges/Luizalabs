@@ -1,6 +1,4 @@
-# Luizalabs
-
-# LogisticaVertical
+# Luizalabs - LogisticaVertical
 
 ## Tecnologias Utilizadas
 - ASP.NET Core 6.0
@@ -20,17 +18,17 @@ Inicie a aplicação:
 dotnet run
 ```
 
-# Endpoints
+## Endpoints
 POST /api/orders/upload: Envie um arquivo de pedidos.
 
 GET /api/orders: Consulte pedidos com filtros (orderId, startDate, endDate).
 
-# Decisões Arquiteturais
+## Decisões Arquiteturais
 -Separação em camadas (API, Application, Domain, Infrastructure).
 -Uso do Entity Framework Core para ORM.
 -Processamento de arquivo com agrupamento em memória.
 
-# Notas Finais:
+## Notas Finais:
 
 A solução segue os princípios SOLID e prioriza simplicidade.
 O código está pronto para ser estendido com autenticação, logging e mais validações.
