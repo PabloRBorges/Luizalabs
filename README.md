@@ -15,7 +15,7 @@
 Inicie a aplicação:
 
 ```bash
-dotnet run
+   dotnet run
 ```
 
 ## Endpoints
