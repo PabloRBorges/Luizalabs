@@ -1,8 +1,5 @@
-﻿using Luizalabs.Domain.Entities;
-using Luizalabs.Infrastructure.Parsers;
-using Newtonsoft.Json.Linq;
+﻿using Luizalabs.Infrastructure.Parsers;
 using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class HighPerformanceFileParserTests
 {
@@ -40,8 +37,8 @@ public class HighPerformanceFileParserTests
         Assert.Equal(57, user1.Id);
         Assert.Equal("Elidia Gulgowski IV", user1.Name);
         Assert.Single(user1.Orders);
-        Assert.Equal(0, user1.Orders.First().Products.First().Id) ; // productId deve ser 0
-        Assert.Equal(1417.25m, user1.Orders.First().Total );
+        Assert.Equal(0, user1.Orders.First().Products.First().Id); // productId deve ser 0
+        Assert.Equal(1417.25m, user1.Orders.First().Total);
         Assert.Equal(new DateTime(2021, 09, 19), user1.Orders.First().Date);
 
         var user2 = users.First(u => u.Id == 1);
