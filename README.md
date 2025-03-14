@@ -12,11 +12,11 @@
    ```bash
    dotnet ef migrations add InitialCreate
    dotnet ef database update
+   ```
 Inicie a aplicação:
-
-```bash
+   ```bash
    dotnet run
-```
+   ```
 
 ## Endpoints
 POST /api/orders/upload: Envie um arquivo de pedidos.
