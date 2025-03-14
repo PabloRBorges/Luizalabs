@@ -65,7 +65,7 @@ namespace Luizalabs.Infrastructure.Parsers
             var productIdSpan = line.Slice(65, 10).TrimStart('0');
             productId = productIdSpan.IsEmpty ? 0 : int.Parse(productIdSpan);
 
-            value = decimal.Parse(line.Slice(75, 12).Trim());
+            value = decimal.Parse(line.Slice(75, 12).Trim(), CultureInfo.InvariantCulture);
             date = DateTime.ParseExact(line.Slice(87, 8), "yyyyMMdd", CultureInfo.InvariantCulture);
         }
 

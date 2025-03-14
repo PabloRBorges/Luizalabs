@@ -1,5 +1,8 @@
-﻿using Luizalabs.Infrastructure.Parsers;
+﻿using Luizalabs.Domain.Entities;
+using Luizalabs.Infrastructure.Parsers;
+using Newtonsoft.Json.Linq;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class HighPerformanceFileParserTests
 {
@@ -16,7 +19,7 @@ public class HighPerformanceFileParserTests
     {
         // Arr
         var fileContent = new StringBuilder()
-            .AppendLine("0000000070                              Palmer Prosacco00000007530000000003     1836.7420210308")
+            .AppendLine("0000000001                              Palmer Prosacco00000007530000000003     1836.7420210308")
             .AppendLine("0000000075                                  Bobbie Batz00000007980000000002     1578.5720211116")
             .AppendLine("0000000049                               Ken Wintheiser00000005230000000003      586.7420210903")
             .AppendLine("0000000014                                 Clelia Hills00000001460000000001      673.4920211125")
@@ -31,17 +34,16 @@ public class HighPerformanceFileParserTests
         var users = _fileParser.Parse(stream);
 
         // Assert
-        Assert.Equal(2, users.Count);
+        Assert.Equal(7, users.Count);
 
-        var user1 = users.First(u => u.Id == 1);
-        Assert.Equal("Palmer Prosacco", user1.Name);
-        Assert.Single(user1.Orders);
-        Assert.Equal(512.24m, user1.Orders.First().Total);
+        var user1 = users.First(u => u.Id == 57);
 
-        var user2 = users.First(u => u.Id == 2);
-        Assert.Equal("Bobbie Batz", user2.Name);
-        Assert.Single(user2.Orders);
-        Assert.Equal(256.24m, user2.Orders.First().Total);
+        Assert.Equal(57, user1.Id);
+        Assert.Equal("Elidia Gulgowski IV", user1.Name);
+        Assert.Equal(1, user1.Orders.Count);
+        Assert.Equal(0, user1.Orders.First().Products.First().Id) ; // productId deve ser 0
+        Assert.Equal(1417.25m, (decimal)user1.Orders.First().Total );
+        Assert.Equal(new DateTime(2021, 09, 19), user1.Orders.First().Date);
     }
 
     [Fact(DisplayName = "Parse emptyfile")]
