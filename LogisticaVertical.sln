@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{31BE17C6-663B-4CF3-BDF4-7D84F7B87D74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{609FC3A1-8CE2-4B87-A896-6BD3E8641466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticaVertical.API", "src\LogisticaVertical.API\LogisticaVertical.API.csproj", "{1C43152D-42F9-4EE8-A010-791BC425733E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticaVertical.Application", "src\LogisticaVertical.Application\LogisticaVertical.Application.csproj", "{C50B913A-C3CE-42EF-B71D-3A236F7FADBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticaVertical.Infrastructure", "src\LogisticaVertical.Infrastructure\LogisticaVertical.Infrastructure.csproj", "{758081F1-0522-4FDD-ADEC-64DE28A375FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticaVertical.Domain", "src\LogisticaVertical.Domain\LogisticaVertical.Domain.csproj", "{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistica.Tests", "tests\Logistica.Tests\Logistica.Tests.csproj", "{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C43152D-42F9-4EE8-A010-791BC425733E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C43152D-42F9-4EE8-A010-791BC425733E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C43152D-42F9-4EE8-A010-791BC425733E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C43152D-42F9-4EE8-A010-791BC425733E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50B913A-C3CE-42EF-B71D-3A236F7FADBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50B913A-C3CE-42EF-B71D-3A236F7FADBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50B913A-C3CE-42EF-B71D-3A236F7FADBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50B913A-C3CE-42EF-B71D-3A236F7FADBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758081F1-0522-4FDD-ADEC-64DE28A375FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758081F1-0522-4FDD-ADEC-64DE28A375FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758081F1-0522-4FDD-ADEC-64DE28A375FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758081F1-0522-4FDD-ADEC-64DE28A375FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C43152D-42F9-4EE8-A010-791BC425733E} = {31BE17C6-663B-4CF3-BDF4-7D84F7B87D74}
+		{C50B913A-C3CE-42EF-B71D-3A236F7FADBA} = {31BE17C6-663B-4CF3-BDF4-7D84F7B87D74}
+		{758081F1-0522-4FDD-ADEC-64DE28A375FD} = {31BE17C6-663B-4CF3-BDF4-7D84F7B87D74}
+		{BFA295FF-5A41-4131-9E5E-EFC54C51DCA7} = {31BE17C6-663B-4CF3-BDF4-7D84F7B87D74}
+		{FC6B9E28-99EE-4680-BCA2-D3F14C0E80D6} = {609FC3A1-8CE2-4B87-A896-6BD3E8641466}
+	EndGlobalSection
+EndGlobal
