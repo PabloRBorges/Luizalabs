@@ -1,7 +1,7 @@
 # Luizalabs - LogisticaVertical
 
 ## Tecnologias Utilizadas
-- ASP.NET Core 6.0
+- ASP.NET Core 9.0
 - Entity Framework Core
 - SQL Server
 
