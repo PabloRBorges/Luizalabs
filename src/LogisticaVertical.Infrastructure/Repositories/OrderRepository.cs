@@ -15,23 +15,23 @@ namespace LogisticaVertical.Infrastructure.Repositories
 
         public async Task BulkInsertAsync(IEnumerable<User> users)
         {
-            await using var transaction = await _context.Database.BeginTransactionAsync();
+            var strategy = _context.Database.CreateExecutionStrategy();
 
-            try
+            await strategy.ExecuteAsync(async () =>
             {
-                await _context.BulkInsertAsync(users.ToList(),
-                    options => options.IncludeGraph = true);
+                await using var transaction = await _context.Database.BeginTransactionAsync();
 
-                //na mão com sql puro ... ficou mais lento
-                //await _context.Database.ExecuteSqlRawAsync("INSERT INTO Users (parametros) VALUES (valores);");
-
-                await transaction.CommitAsync();
-            }
-            catch
-            {
-                await transaction.RollbackAsync();
-                throw;
-            }
+                try
+                {
+                    await _context.BulkInsertAsync(users.ToList(), options => options.IncludeGraph = true);
+                    await transaction.CommitAsync();
+                }
+                catch
+                {
+                    await transaction.RollbackAsync();
+                    throw;
+                }
+            });
         }
 
         public async Task<IEnumerable<OrderResponse>> GetOrdersAsync(
