@@ -1,14 +1,10 @@
 ﻿using LogisticaVertical.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LogisticaVertical.Infrastructure.Data
 {
+    [ExcludeFromCodeCoverage]
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
@@ -30,7 +26,7 @@ namespace LogisticaVertical.Infrastructure.Data
 
             modelBuilder.Entity<Product>()
                 .HasKey(p => p.Id);
-            
+
             // Configuração da precisão para valores decimais
             modelBuilder.Entity<Order>()
                 .Property(o => o.Total)

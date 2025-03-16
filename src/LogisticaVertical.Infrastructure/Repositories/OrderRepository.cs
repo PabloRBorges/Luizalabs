@@ -61,13 +61,13 @@ namespace LogisticaVertical.Infrastructure.Repositories
                                  .FirstOrDefault(), // Correção: evitando acesso síncrono ao banco
                     new List<OrderDto> // Correção: Usando uma lista em vez de array
                     {
-                    new OrderDto(
-                        o.Id,
-                        o.Total.ToString("0.00"),
-                        o.Date.ToString("yyyy-MM-dd"),
-                        o.Products.Select(p => new ProductDto(p.IdProduct, p.Value.ToString("0.00"))).ToList() // Correção: Materializando a lista
-                    )})).ToListAsync();
+                        new OrderDto(
+                            o.Id,
+                            o.Products.Sum(x=> x.Value).ToString("0.00"),
+                            //o.Total.ToString("0.00"),
+                            o.Date.ToString("yyyy-MM-dd"),
+                            o.Products.Select(p => new ProductDto(p.IdProduct, p.Value.ToString("0.00"))).ToList() // 
+                        )})).ToListAsync();
         }
     }
-
 }

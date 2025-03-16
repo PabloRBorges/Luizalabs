@@ -1,4 +1,6 @@
-﻿namespace LogisticaVertical.Domain.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace LogisticaVertical.Domain.Entities
 {
     //public class Product
     //{
@@ -14,6 +16,8 @@
         public decimal Value { get; set; }
 
         public int OrderId { get; set; }
+        
+        [ExcludeFromCodeCoverage]
         public Order Order { get; set; } // Propriedade de navegação
     }
 }

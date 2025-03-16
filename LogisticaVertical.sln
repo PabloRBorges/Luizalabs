@@ -19,6 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistica.Tests", "tests\Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistica.Integration.Tests", "tests\Logistica.Integration.Tests\Logistica.Integration.Tests.csproj", "{D1E88549-C4A1-4496-A2D8-FEF5D02413DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "coverage", "coverage", "{E9F0BCD5-61EF-4679-9962-8F27A87B822D}"
+	ProjectSection(SolutionItems) = preProject
+		codecoverage.runsettings = codecoverage.runsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

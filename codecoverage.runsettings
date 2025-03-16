@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <CodeCoverage>
+    <Filters>
+      <Exclude>
+        <Path>./src/LogisticaVertical.Infrastructure/Migrations/* </Path>
+      </Exclude>
+    </Filters>
+  </CodeCoverage>
+</RunSettings>
