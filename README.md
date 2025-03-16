@@ -160,6 +160,7 @@ O projeto conta com testes unitários e de integração:
 
 - **Testes Unitários:** Localizados em tests/Logistica.Tests
 - **Testes de Integração:** Localizados em tests/Logistica.Integration.Tests
+- **Teste de carga:** Localizado em tests/Logistica.Tests
 
 Utilize o comando abaixo para executar os testes:
 
