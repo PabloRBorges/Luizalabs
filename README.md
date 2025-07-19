@@ -75,7 +75,7 @@ Este projeto segue os princípios do SOLID para garantir um código limpo, modul
 
 
 
-## Documentão da API
+## Documentação da API
 #### Versão
 - **v1**
 
